@@ -120,7 +120,7 @@ MAIL_PASS= 16 digit app password
 
 
 ##### Quiz
-- **grade:**Number, required
+- **grade:** Number, required
 - **Subject**: String, required
 - **TotalQuestions**: Number, required
 - **Difficulty:** Enum of ["EASY", "MEDIUM", "HARD"], required
