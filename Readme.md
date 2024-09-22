@@ -120,7 +120,7 @@ MAIL_PASS= 16 digit app password
 
 
 ##### Quiz
-- **grade: **Number, required
+- **grade:**Number, required
 - **Subject**: String, required
 - **TotalQuestions**: Number, required
 - **Difficulty:** Enum of ["EASY", "MEDIUM", "HARD"], required
@@ -130,15 +130,15 @@ MAIL_PASS= 16 digit app password
 - **createdBy:** String, required
 
 ##### Response
-- **questionId: **ObjectId, references Question, required
+- **questionId**: ObjectId, references Question, required
 - **userResponse**: String, required
 
 ##### Submission
-- **quizId: **ObjectId, references Quiz, required
+- **quizId**: ObjectId, references Quiz, required
 - **username:** String, required
 - **responses**: Array of Response objects
-- **score: **Number, required
-- **submittedDate:** Date, default Date.now
+- **score**: Number, required
+- **submittedDate**: Date, default Date.now
 
 ------------
 
