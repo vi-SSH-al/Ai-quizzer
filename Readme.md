@@ -39,13 +39,13 @@ AI Quizzer is a microservice designed to manage student quizzes and scores, offe
 
 ### 
 ### **Tech Stack**
-Language: Node.js
-Framework: Express.js
-Database: MongoDB(Atlas)
-Authentication: JWT
-AI Service: Groq AI (for quiz, hint generation and suggestion)
-Deployment: Render / Docker / (Heroku optional)
-Email Service: Nodemailer
+- Language: Node.js
+- Framework: Express.js
+- Database: MongoDB(Atlas)
+- Authentication: JWT
+- AI Service: Groq AI (for quiz, hint generation and suggestion)
+- Deployment: Render / Docker / (Heroku optional)
+- Email Service: Nodemailer
 
 
 ------------
@@ -114,31 +114,31 @@ MAIL_PASS= 16 digit app password
 ## Database Schema
 
 ##### Question : 
-**questionTitle:** String, required
-**options:** Contains four options (A, B, C, D) each of type String, required
-**correctOption:** Enum of ["A", "B", "C", "D"], required
+- **questionTitle:** String, required
+- **options:** Contains four options (A, B, C, D) each of type String, required
+- **correctOption:** Enum of ["A", "B", "C", "D"], required
 
 
 ##### Quiz
-**grade: **Number, required
-**Subject**: String, required
-**TotalQuestions**: Number, required
-**Difficulty:** Enum of ["EASY", "MEDIUM", "HARD"], required
-**questions**: Array of ObjectId, references Question
-**MaxScore:** Number, required
-**createdAt:** Date, default Date.now
-**createdBy:** String, required
+- **grade: **Number, required
+- **Subject**: String, required
+- **TotalQuestions**: Number, required
+- **Difficulty:** Enum of ["EASY", "MEDIUM", "HARD"], required
+- **questions**: Array of ObjectId, references Question
+- **MaxScore:** Number, required
+- **createdAt:** Date, default Date.now
+- **createdBy:** String, required
 
 ##### Response
-**questionId: **ObjectId, references Question, required
-**userResponse**: String, required
+- **questionId: **ObjectId, references Question, required
+- **userResponse**: String, required
 
 ##### Submission
-**quizId: **ObjectId, references Quiz, required
-**username:** String, required
-**responses**: Array of Response objects
-**score: **Number, required
-**submittedDate:** Date, default Date.now
+- **quizId: **ObjectId, references Quiz, required
+- **username:** String, required
+- **responses**: Array of Response objects
+- **score: **Number, required
+- **submittedDate:** Date, default Date.now
 
 ------------
 
